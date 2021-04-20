@@ -20,7 +20,8 @@ def main(reunion):
     totalRisk = 4
   
   print(totalRisk)
-  return totalRisk
+  reunion.risk = totalRisk
+  return reunion
   
 
 class Reunion:
