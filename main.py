@@ -1,9 +1,10 @@
-import datetime
+from datetime import datetime
 
 def main(reunion):
   subtotalRisk = 0
   totalRisk = 0
-  usersRisk = getUsersFactor(reunion.users)
+  numberOfUsers = len(reunion.users)
+  usersRisk = getUsersFactor(numberOfUsers)
   durationRisk = getDurationFactor(reunion.duration)
   masksRisk = getMasksFactor(reunion.masks)
   openSpaceRisk = getOpenSpaceFactor(reunion.openSpace)
@@ -25,8 +26,8 @@ def main(reunion):
   
 
 class Reunion:
-  def __init__(self, users, duration, masks, openSpace ):
-    self.registeredDate = datetime.datetime.now()
+  def __init__(self, users, duration, masks, openSpace, registeredDate):
+    self.registeredDate = datetime.strptime(registeredDate,"%d/%m/%y")
     self.users = users
     self.duration = duration
     self.masks = masks
@@ -78,8 +79,8 @@ def getOpenSpaceFactor(openSpace):
 
 
 if(__name__ == "__main__"):
-  r1 = Reunion(3,20,True,True) 
-  r2 = Reunion(15, 30, False, True)
-  r3 = Reunion(15, 60, True, False)
-  r4 = Reunion(20,90,False, False)
-  main(r2)
+  r1 = Reunion( ["mariana@mail.com", "caro@mail.com", "dario@mail.com" ],20,True,True, "11/03/02") 
+  # r2 = Reunion(15, 30, False, True)
+  # r3 = Reunion(15, 60, True, False)
+  # r4 = Reunion(20,90,False, False)
+  main(r1)
