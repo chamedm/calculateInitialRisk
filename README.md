@@ -24,3 +24,13 @@ Microservice that calculates the initial risk based on the information provided 
 
 ## Deployment URL
 https://us-south.functions.appdomain.cloud/api/v1/web/is708177%40iteso.mx_dev/ProyectoFinal/calculateInitialRisk
+
+Exapmple of body on GET:
+{
+  "registeredDate": "22/04/11",
+  "users": ["mariana@mail.com", "caro@mail.com", "dario@mail.com" ],
+  "duration": 30,
+  "masks": true,
+  "openSpace": true,
+  "risk": 2
+}
