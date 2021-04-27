@@ -12,10 +12,10 @@ Microservice that calculates the initial risk based on the information provided 
   * Algorithm should take into account whether or not was an open space
   * Algorithm should take into account the two week span of transmission
 - The initial risk will be classified on quarters in a semaphore scale:
-  * Green: 0-25%
-  * Yellow: 25-50%
-  * Orange: 50-75%
-  * Red: 75-100%
+  * 1 - Green: 0-25%
+  * 2 - Yellow: 25-50%
+  * 3 - Orange: 50-75%
+  * 4 - Red: 75-100%
 
 ## Non Functional Requirements
 - The risk of reunion is presented easily and visually on the UI
@@ -23,3 +23,4 @@ Microservice that calculates the initial risk based on the information provided 
 
 
 ## Deployment URL
+https://us-south.functions.appdomain.cloud/api/v1/web/is708177%40iteso.mx_dev/ProyectoFinal/calculateInitialRisk
